@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+
+<!--
+Idaho airstrips foreflight pack from scraping
+https://idahoaviation.com/
+
+Airstrip Database for ForeFlight
+
+#############################################
+Use of this information is at the pilot's
+own risk! Exercise extreme caution! Fly Safe!
+#############################################
+
+PLEASE MAKE SURE TO VERIFY AIRSTRIP INFORMATION
+ON THE https://idahoaviation.com/ WEBSITE. And please submit
+Airstrip Condition Reports!
+
+For comments, suggestions, changes, email support@utahbackcountrypilots.org
+
+ForeFlight Content Pack generated:2023.05.26
+Style formatting guide:
+
+-->
+
+<Document>
+    <name>Idaho Airstrips.kml</name>
+    <description>Backcountry airstrips in Idaho</description>
+
+
+    <Style id="nStatus0">
+        <IconStyle>
+            <color>ff0000ff</color>
+            <scale>1.0</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/red-square.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+    <Style id="nStatus1">
+        <IconStyle>
+            <scale>1.0</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-square.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+    <Style id="nStatus2">
+        <IconStyle>
+            <scale>1.0</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+    <Style id="nStatus2ppr">
+        <IconStyle>
+            <color>ff3186f1</color>
+            <scale>1.0</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/red-square.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+    <Style id="nStatus3">
+        <IconStyle>
+            <scale>.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/blu-square.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+    <Style id="nStatus9">
+        <IconStyle>
+          <color>ff999999</color>
+          <scale>1.0</scale>
+          <Icon>
+              <href>http://maps.google.com/mapfiles/kml/paddle/red-square.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+
+    {% for airstrip in formatted_airstrips%}
+    {{airstrip}}
+    {% endfor %}
+</Document>
+</kml>
