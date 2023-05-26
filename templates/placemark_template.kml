@@ -1,0 +1,203 @@
+<Placemark>
+    <name>{{key}}</name>
+    <description><![CDATA[<style>
+        *{
+            padding:0;
+            margin:0;
+            font-family:sans-serif;
+        }
+        .bold{
+            font-weight:700;
+        }
+        .extraspace{
+            padding-top:10px;
+        }
+        .extraspaceafter{
+            padding-bottom:10px;
+        }
+        .extraspacebefore{
+            padding-top:10px;
+        }
+        .linetop{
+            margin-left:10px;
+            border-top:1px solid #333;
+        }
+        .indent {
+            padding-left:10px;
+            display: block;
+        }
+        .tablerow {
+            display:block;
+            width: 100%;
+            border-bottom: 1px #CFCFCF solid;
+        }
+        .tablerownoborder {
+            display:block;
+            width: 100%;
+        }
+        .pireptablerow {
+            display:block;
+            width: 100%;
+        }
+        .borderbottom {
+            display:block;
+            width: 100%;
+            border-bottom: 1px #CFCFCF solid;
+            padding-top:4px;
+            padding-bottom:4px;
+        }
+        .tablecell {
+            border-top:1px;
+            border-bottom:1px;
+        }
+        .tablefield {
+            display: inline-block;
+            width: 35%;
+            min-width: 30px;
+        }
+        p{
+            padding-left:10px;
+            padding-right:10px;
+        }
+            .spacer {
+                display: block;
+                height: 33px;
+                width: 100%;
+            }
+            .spacer2 {
+                display: block;
+                height: 31px;
+                width: 100%;
+            }
+            .title {
+                background-color:#24364E;
+                margin:0;
+                padding:0;
+                font-weight:550;
+                font-size:20px;
+                padding-top:4px;
+                padding-left:10px;
+                padding-bottom:4px;
+                color: #FFF;
+            }
+            .fixed {
+                position:fixed;
+                top:0px;
+                left:0px;
+                width:100%;
+                height:34px;
+            }
+            .statusclosed {
+                width: 100%;
+                display: inline-block;
+                padding-top:7px;
+                padding-bottom:4px;
+                padding-left:10px;
+                color:#eb3434;
+                font-weight:700;
+                font-size:15px;
+                background-color:#F2F2F2;
+                border-top:1px #CFCFCF solid;
+                border-bottom:1px #CFCFCF solid;
+            }
+            .statusunverified {
+                width: 100%;
+                display: inline-block;
+                padding-top:7px;
+                padding-bottom:4px;
+                padding-left:10px;
+                color:#ebc934;
+                font-weight:700;
+                font-size:15px;
+                background-color:#F2F2F2;
+                border-top:1px #CFCFCF solid;
+                border-bottom:1px #CFCFCF solid;
+            }
+            .statusppr {
+                width: 100%;
+                display: inline-block;
+                padding-top:7px;
+                padding-bottom:4px;
+                padding-left:10px;
+                color:#eb7d34;
+                font-weight:700;
+                font-size:15px;
+                background-color:#F2F2F2;
+                border-top:1px #CFCFCF solid;
+                border-bottom:1px #CFCFCF solid;
+            }
+            .tableheader {
+                width: 100%;
+                display: inline-block;
+                font-size:14px;
+                padding-top:4px;
+                padding-bottom:4px;
+                font-weight:700;
+                padding-left:10px;
+                color: #24364E;
+                background-color:#F2F2F2;
+                border-top:1px #CFCFCF solid;
+                border-bottom:1px #CFCFCF solid;
+            }
+            .websitereference {
+                width: 100%;
+                display: inline-block;
+                font-size: 14px;
+                font-style: italic;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                font-weight: 700;
+                padding-left: 10px;
+                color: #24364E;
+                border-top: 1px #CFCFCF solid;
+                border-bottom: 1px #CFCFCF solid;
+            }
+            .tablelabel {
+                font-size:16px;
+                padding-top:4px;
+                padding-bottom:4px;
+                padding-left:10px;
+                font-weight:550;
+            }
+            .pireptablelabel {
+                font-size:16px;
+                padding-top:2px;
+                padding-bottom:2px;
+                padding-left:10px;
+                font-weight:400;
+            }
+            .tablevalue {
+                font-size:16px;
+                padding-top:4px;
+                padding-bottom:4px;
+                padding-left:10px;
+                font-weight:550;
+                color:697D91;
+                width:100%
+            }
+            .pireptablevalue {
+                font-size:16px;
+                padding-top:2px;
+                padding-bottom:2px;
+                padding-left:10px;
+                font-weight:400;
+                color:697D91;
+            }
+            .text {
+                font-size:16px;
+                padding-top:4px;
+                padding-bottom:4px;
+                padding-left:10px;
+                font-weight:400;
+                line-height:1.3;
+            }
+            p {
+                font-size: 16px;
+                line-height:1.3;
+            }</style>{{template_row}}
+    <styleUrl>#nStatus1</styleUrl>
+    <Point>
+        <altitudeMode>absolute</altitudeMode>
+        <coordinates>{{lon}},{{lat}},{{elevation}}</coordinates>
+    </Point>
+</Placemark>
