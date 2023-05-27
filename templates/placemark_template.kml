@@ -198,6 +198,6 @@
     <styleUrl>#nStatus1</styleUrl>
     <Point>
         <altitudeMode>absolute</altitudeMode>
-        <coordinates>{{lon}},{{lat}},{{elevation}}</coordinates>
+        <coordinates>{{longitude}},{{latitude}},{{elevation}}</coordinates>
     </Point>
 </Placemark>

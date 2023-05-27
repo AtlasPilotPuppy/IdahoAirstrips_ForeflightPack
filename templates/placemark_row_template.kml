@@ -15,14 +15,18 @@
         </div>
     </div>
     <div class='tablerownoborder'>
-        <div class='tablelabel'><a
-                href=https://forecast.weather.gov/MapClick.php?lat={{lat}}&lon=-{{lon}}#.X8nNmS1Ha-o>Weather
-                from National Weather Service</a></div>
+        <div class='tablelabel'>
+            <a href='https://forecast.weather.gov/MapClick.php?lat={{latitude}}&lon=-{{longitude}}'>
+                Weather from National Weather Service
+            </a>
+        </div>
     </div>
     <div class='tablerownoborder'>
-        <div class='tablelabel'><a
-                href=https://www.google.com/maps/@?api=1&map_action=map&center={{lat}},-{{lon}}&zoom=16&basemap=satellite>Google
-                Maps</a></div>
+        <div class='tablelabel'>
+            <a href='https://www.google.com/maps/@{{latitude}},{{longitude}},{{ elevation_m }}m/data=!3m1!1e3?entry=ttu'>
+                Google Maps
+            </a>
+        </div>
     </div>
     <div class='tablerownoborder'>
         <div class='tableheader'>RUNWAY INFORMATION</div>
@@ -33,6 +37,15 @@
         </div>
         <div class='tablefield'>
             <p class='tablevalue'>{{runway['primary_runway']}}</p>
+        </div>
+    </div>
+
+    <div class='tablerownoborder'>
+        <div class='tableheader'>Classification</div>
+    </div>
+    <div class='tablerow'>
+        <div class='tablerownoborder'>
+            <p class='tablevalue'>{{classification}}</p>
         </div>
     </div>
     <div class='tablerow'>
@@ -51,31 +64,82 @@
             <p class='tablevalue'>{{runway['type']}}</p>
         </div>
     </div>
+
+
     <div class='tablerownoborder'>
         <div class='tableheader'>LAND INFORMATION</div>
     </div>
     {% for manager in managers %}
     <div class='tablerownoborder'>
         <div class='tablefield'>
-            <p class='tablelabel'>Manager</p>
-        </div>
-        <div class='tablefield'>
-            <p class='tablevalue'>{{manager}}</p>
+            <p class='text'>{{manager}}</p>
         </div>
     </div>
     {% endfor %}
+
     <div class='tablerownoborder'>
         <div class='tableheader'>DESCRIPTION</div>
     </div>
     <div class='tablerownoborder'>
         <div class='extraspaceafter'>
             <p class='text'>
-            <p>{description}</p>
+            <p>{{description}}</p>
             </p>
         </div>
     </div>
+    {% if features['amenities'] %}
+    <div class='tablerownoborder'>
+        <div class='tableheader'>AMENETIES</div>
+    </div>
+    {% for amenity in features['amenities'] %}
+    <div class='tablerow'>
+        <div class='tablefield'>
+            <p class='tablelabel'>{{amenity}}</p>
+        </div>
 
-    <p class='text websitereference'>Airport Reference <a
-            href='{{link}}}'>{{key}}</a>.</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if features['accomodation'] %}
+    <div class='tablerownoborder'>
+        <div class='tableheader'>AMENETIES</div>
+    </div>
+    {% for accom in features['accomodation'] %}
+    <div class='tablerow'>
+        <div class='tablefield'>
+            <p class='tablelabel'>Member Name</p>
+        </div>
+        <div class='tablefield'>
+            <p class='tablevalue'>{{accom['member']}}</p>
+        </div>
+    </div>
+    <div class='tablerownoborder'>
+        <div class='extraspace'>
+            <p class='textl'>{{accom[details]}}</p>
+        </div>
+
+    </div>
+    {% endfor %}
+    {% endif %}
+
+
+    {% if weather %}
+    <div class='tablerownoborder'>
+        <div class='tableheader'>WEATHER LINKS</div>
+    </div>
+    {% for wlink in weather %}
+    <div class='tablerow'>
+        <div class='tablefield'>
+            <p class='tablelabel'>{{wlink['station']}}</p>
+        </div>
+        <div class='tablefield'>
+            <p class='tablevalue'><a href='{{wlink['url']}}'>{{wlink['url']}}</a></p>
+        </div>
+
+    </div>
+    {% endfor %}
+    {% endif %}
+    <p class='text websitereference'>Airport Reference <a href='{{link}}}'>{{key}}</a>.</p>
     <p class='borderbottom'>
         </div>]]></description>
